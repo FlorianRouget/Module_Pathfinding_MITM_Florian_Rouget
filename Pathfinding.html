@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Pathfinding</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="pathstyle.css">
+	</head>
+	<body onload="initText()">
+		<header>
+			<h1>Pathfinding</h1>
+		</header>
+		<div class="corpus">
+			<section class="gauche">
+				<canvas id="myCanvas" width="512" height="512" style="border:1px solid #000000;"> 
+				</canvas>
+			</section>
+			<section class="gauche control">
+				<br/>
+				<label for="input_type" id="indic_input">Type d'input : </label><br/>
+				<input type="range" value="1" min="1" max="5" id="input_type" name="input_type" onchange="changeInputShown()"/><br/>	
+				<br/>
+				<fieldset>
+					<legend>Option de Room</legend>
+					<label for="room_width" id="indic_width" >Largeur</label><br/>
+					<input type="range" value="5" min="2" max="16" id="width" name="room_width" onchange="changeWidth()" /><br/>
+					<label for="room_height" id="indic_height" >Hauteur</label><br>
+					<input type="range" value="5" min="2" max="16" id="height" name="room_height" onchange="changeHeight()" /><br/>
+				</fieldset>
+				<fieldset>
+					<legend>Option de Door</legend>
+					<label id="indic_angle" >Orientation :</label><br/>
+					<input type="radio" value="horizontale" name="door_angle" checked />Horizontale<br/>
+					<input type="radio" value="verticale" name="door_angle" />Verticale<br/>
+				</fieldset>
+				<fieldset>
+					<legend>Message : </legend>
+					<p id="debugg"> </p>
+				</fieldset>
+				<br/>
+				<button type="button" onclick="findYourWay()" >Find your path !</button>
+				<button type="button" onclick="clearAll()">Efface Tout</button>
+			</section>
+		</div>
+		<script src="js/classe.js"></script>
+		<script src="js/drawing.js"></script>
+		<script src="js/form_event.js"></script>
+		<script src="js/var.js"></script>
+		<script src="js/pathfind.js"></script>
+		<footer>
+		</footer>
+	</body>
+</html>

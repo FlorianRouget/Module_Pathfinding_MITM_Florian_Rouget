@@ -1,0 +1,42 @@
+
+html{
+	height: 100%;
+	background: linear-gradient(#111, #444, #999, #CCC, #999, #555, #111);
+}
+
+body{
+	max-width: 900px;
+	margin: auto;
+}
+
+h1{
+	color: white;
+}
+
+canvas{
+	background-color: white;
+}
+
+section{
+	margin: 0px 20px 0px 20px;
+}
+
+button{
+	min-height: 20px;
+	min-width: 50px;
+}
+
+.control{
+	max-width: 275px;
+	border: 1px solid black;
+	padding: 10px;
+	background-color: white;
+}
+
+.droite{
+	float: right;
+}
+
+.gauche{
+	float: left;
+}
